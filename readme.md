@@ -1,6 +1,6 @@
 # Rakamin Homework Week5
 
-> **Homework Week 5 - Basic Javascript OOP, Asynchronous, & DOM**br
+> **Homework Week 5 - Basic Javascript OOP, Asynchronous, & DOM**<br>
 > *Bootcamp Online Fullstack Web Development*
 >
 > **Nama: Dedit Hery Suprastyo**
@@ -18,7 +18,7 @@ tab List Pendaftar. Form memiliki isian:
     Pada tab List pendaftar akan berisi tabel yang berisi pendaftar dan resume dibawahnya, isi resume seperti berikut
     Rata rata pendaftar memiliki uang sangu sebesar [nilai rata rata uang sangu] dengan rata rata umur [nilai rata rata umur]
 
-### Catatan:
+### Catatan
 
 - Imajinasikan dan coba terapkan salah satu konsep OOP dan Asynchronous dalam menyelesaikan masalah tersebut
 - Push ke REPO dan upload link REPO, tolong repo dalam status public
