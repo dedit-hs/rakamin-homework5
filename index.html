@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="dashboard.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Nglayap - City Tour</title>
+  </head>
+  <body>
+    <header
+      class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
+    >
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#"
+        >Nglayap.id</a
+      >
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <input
+        class="form-control form-control-dark w-100 rounded-0 border-0"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="#">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="position-sticky pt-3 sidebar-sticky">
+            <ul class="nav flex-column" nav-pills me-3" id="v-pills-tab"
+            role="tablist" aria-orientation="vertical">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  <span data-feather="home" class="align-text-bottom"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-peserta"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-peserta"
+                  aria-selected="true"
+                >
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  Peserta
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">Dashboard - City Tour</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Share
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Export
+                </button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary dropdown-toggle"
+              >
+                <span data-feather="calendar" class="align-text-bottom"></span>
+                This week
+              </button>
+            </div>
+          </div>
+
+          <div class="tab-content" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+              tabindex="0"
+            >
+              <h2>List Peserta</h2>
+              <div class="table-responsive">
+                <table class="table table-striped table-sm" id="table-peserta">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nama</th>
+                      <th scope="col">Umur</th>
+                      <th scope="col">Uang Saku</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+              <h4 id="rata"></h4>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-peserta"
+              role="tabpanel"
+              aria-labelledby="v-pills-peserta-tab"
+              tabindex="0"
+            >
+              <h2>Registrasi Peserta</h2>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <label for="nama" class="form-label"
+                    >Full name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nama"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Fullname
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                  <label for="umur" class="form-label"
+                    >Umur</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="umur"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Umur
+                  </div>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                  <label for="uangsaku" class="form-label"
+                    >Uang Saku</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="uangsaku"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Uang Saku
+                  </div>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">
+                    Submit form
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+        class Peserta {
+          constructor(nama, umur, uangSaku) {
+            this.nama = nama,
+            this.umur = umur,
+            this.uangSaku = uangSaku
+          }
+        }
+
+        const elementNamaPeserta = document.getElementById("nama");
+        const elementUmurPeserta = document.getElementById("umur");
+        const elementUangsakuPeserta = document.getElementById("uangsaku");
+        const elementRata = document.getElementById("rata");
+
+        let nomor = 0;
+        const umurParaPeserta = [];
+        const uangsakuParaPeserta = [];
+        let rata_rata = 0;
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              const namaPeserta = elementNamaPeserta.value;
+              const umurPeserta = elementUmurPeserta.value;
+              const uangsakuPeserta = elementUangsakuPeserta.value;
+
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+              const { isValid, pesan } = cekInput(namaPeserta, umurPeserta, uangsakuPeserta);
+
+              if (isValid){
+                nomor++;
+                const newPeserta = new Peserta(namaPeserta, umurPeserta, uangsakuPeserta);
+                umurParaPeserta.push(newPeserta.umur);
+                uangsakuParaPeserta.push(parseInt(newPeserta.uangSaku));
+                
+                const table = document.getElementById("table-peserta");
+                const tableRow = table.insertRow(-1);
+              
+                const cell1 = tableRow.insertCell(0);
+                const cell2 = tableRow.insertCell(1);
+                const cell3 = tableRow.insertCell(2);
+                const cell4 = tableRow.insertCell(3);
+              
+                cell1.innerText = "00"+nomor;
+                cell2.innerText = newPeserta.nama;
+                cell3.innerText = newPeserta.umur;
+                cell4.innerText = newPeserta.uangSaku;
+
+                let totalUangSaku = uangsakuParaPeserta.reduce((a,b) => a + b, 0);
+                let jumlahPeserta = umurParaPeserta.length
+                rata_rata = Math.round(totalUangSaku / jumlahPeserta) ;
+                console.log(totalUangSaku);
+                console.log(jumlahPeserta);
+                console.log(rata_rata);
+                elementRata.innerHTML=`Rata-rata pendaftar memiliki uang saku sebesar:  ${rata_rata}`;
+              } else {
+                alert(pesan);
+              }
+
+            },
+            false
+          );
+        });
+
+        function cekInput(nama, umur, uangsaku) {
+          let isValid = true;
+          let pesan = "";
+
+          if (nama.length < 10) {
+            isValid = false;
+            pesan = "Nama minimal 10 karakter";
+          }
+        
+          if (umur < 25) {
+            isValid = false;
+            pesan = "Umur minimal 25 tahun";
+          }
+        
+          if (uangsaku < 100000 || uangsaku > 1000000) {
+            isValid = false;
+            pesan = "Uang saku minimal 100.000 dan maksimal 1.000.000";
+          }
+
+          return {
+            isValid, pesan
+          }
+        }
+      })();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
